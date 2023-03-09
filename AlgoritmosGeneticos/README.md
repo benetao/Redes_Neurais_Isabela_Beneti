@@ -19,3 +19,9 @@ No segundo experimento,  resolvemos o problema de 4 caixas binárias utilizando 
 Logo, concluímos que o método de busca em grade determinístico probabilístico, e não probabilístico .
 </p>
 </details>
+<details><summary><b>funcoes.py</b></summary>
+<p align="justify">
+Nesse documento, armazenamos funções criandas nos notebooks, o que diminui o risco de perdê-las e facilita o nosso acesso a elas. Dessa forma, criamos a nossa pr´topria biblioteca de funções!
+
+</p>
+</details>
