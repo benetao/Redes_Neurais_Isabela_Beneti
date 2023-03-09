@@ -1,8 +1,5 @@
 # Experimentos de otimização e algoritmos genéticos
-
-Coloque seus experimentos de algoritmos genéticos nesta pasta.
-
-Esceva um README aqui para guiar o leitor sobre seus experimentos realizados.
+Olá, leitor! Nessa pasta, você encontra todos os experimentos realizados por mim, Isabela Beneti, na disciplina de Redes Neurais e Algorítmos Genéticos (RNAG). Para saber mais sobre eles, você pode acessar o seu notebook, ou clicar nos subtópicos abaixo:
 <details><summary><b>Experimento A0.1</b></summary>
 <p align="justify">
 O primeiro experimento, resolvido no notebook "experimento A.01" foi resolvido em classe utilizando python puro, isto é, apenas python e as bibliotecas já embutidas no JupyterNotebook. Nele, nós resolvemos o problema de 4 caixas binárias utilizando o método de busca aleatória. Para tanto, escrevemos 3 funções que, ao final, devolviam uma resposta diferente a cada vez que rodávamos a célula
