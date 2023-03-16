@@ -21,8 +21,10 @@ Logo, concluímos que o método de busca em grade determinístico probabilístic
 </details>
 <details><summary><b>Experimento A0.3</b></summary>
 <p align="justify">
-Nesse documento, armazenamos funções criandas nos notebooks, o que diminui o risco de perdê-las e facilita o nosso acesso a elas. Dessa forma, criamos a nossa pr´topria biblioteca de funções!
-
+Na segunda aula de Redes Neurais e Algorítmos genéticos, desenvolvemos o nosso primeiro algorítmo genético, com o intuito de resolver o nosso problema das caixas binárias, seguindo o mesmo modelo dos outros experimentos.
+<p align="justify">
+No experimento 4, concluímos que o método de algorítimos genéticos probabilístico, pois depende de fatores aleatórios, incluindo constantes como a chance de mutação e de cruzamento, que, inclusive, podem determinar quão boa será a sua resposta.
+</p>
 </p>
 </details>
 <details><summary><b>Experimento A0.4</b></summary>
