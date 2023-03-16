@@ -23,7 +23,7 @@ Logo, concluímos que o método de busca em grade determinístico probabilístic
 <p align="justify">
 Na segunda aula de Redes Neurais e Algorítmos genéticos, desenvolvemos o nosso primeiro algorítmo genético, com o intuito de resolver o nosso problema das caixas binárias, seguindo o mesmo modelo dos outros experimentos.
 <p align="justify">
-No experimento 4, concluímos que o método de algorítimos genéticos probabilístico, pois depende de fatores aleatórios, incluindo constantes como a chance de mutação e de cruzamento, que, inclusive, podem determinar quão boa será a sua resposta.
+No experimento 3, concluímos que o método de algorítimos genéticos probabilístico, pois depende de fatores aleatórios, incluindo constantes como a chance de mutação e de cruzamento, que, inclusive, podem determinar quão boa será a sua resposta.
 </p>
 </p>
 </details>
