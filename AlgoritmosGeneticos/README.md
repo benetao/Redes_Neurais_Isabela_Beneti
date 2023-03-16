@@ -7,6 +7,9 @@ O primeiro experimento, resolvido no notebook "experimento A.01" foi resolvido e
 <p align="justify">
 Logo, concluímos que o método de busca aleatória é probabilístico, e não determinístico.
 </p>
+<p align="justify">
+ATUALIZAÇÃO 16/03: ao invés de definirmos as funções nesse notebook, transferimo-nas para o arquivo "funcoes.py" e imporamo-nas
+</p>
 </details>
 <details><summary><b>Experimento A0.2</b></summary>
 <p align="justify">
