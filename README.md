@@ -107,7 +107,7 @@ Já na pasta [Redes Neurais](https://github.com/benetao/Redes_Neurais_Isabela_Be
 <!-- Sobre mim -->
 ## Sobre mim
 
-Quem é a aluna por trás desse repositório de RNAG? Pois bem, deixe-me apresentar:
+Quem é a aluna por trás desse prejeto de RNAG? Pois bem, deixe-me apresentar:
 
 - 🙋‍♀️ Meu nome é Isabela Bento Beneti
 - 💜 Sou graduanda do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência
