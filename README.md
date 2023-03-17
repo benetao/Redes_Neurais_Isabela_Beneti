@@ -47,7 +47,7 @@
     <li>
       <a href="#isa">Sobre mim</a>
       <ul>
-        <li><a href="#contato">Contato</a></li>
+        <li><a href="#contato">Contatos</a></li>
       </ul>
     </li>
     <li><a href="#acknowledgments">Agradecimentos</a></li>
@@ -117,7 +117,7 @@ Quem é a aluna por trás desse repositório de RNAG? Pois bem, deixe-me apresen
   <img align="right"  src="https://user-images.githubusercontent.com/106626661/193426485-7901d706-9c84-4afd-9e91-e5b39dbdfd61.png">
 
 <!-- CONTATO -->
-### Contato <a name="contato"></a>
+### Contatos <a name="contato"></a>
 
 <div>
   <a href="https://instagram.com/isa.beneti" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
@@ -129,7 +129,7 @@ Quem é a aluna por trás desse repositório de RNAG? Pois bem, deixe-me apresen
 <!-- ACKNOWLEDGMENTS -->
 ## Agradecimentos <a name="acknowledgments"></a>
 
-Sem a ajuda do professor e das glias dessa disciplina, eu provavelmente não teria conseguido chegar até onde cheguei! Por isso, agradeço às seguintes pessoas que contribuíram para este projeto:
+Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido chegar até onde cheguei! Por isso, agradeço às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
