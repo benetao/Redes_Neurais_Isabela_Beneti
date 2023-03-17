@@ -160,8 +160,6 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
   </tr>
 </table>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
