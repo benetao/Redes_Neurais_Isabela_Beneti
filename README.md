@@ -84,17 +84,16 @@ Portanto, no presente repositório você encontra, dentro das pastas  `Algoritmo
 ### Ferramentas <a name="ferramentas"></a>
 
 As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, principalmente, a plataforma Jupyter Notebook e a linguagem pyhton, na qual todos os códigos foram escritos.
+</div>
+<div align="center">
+ <img align="center" alt="Rafa-Python" height="70" width="80" src= https://user-images.githubusercontent.com/106626661/225802823-3edf4493-8191-433f-9152-7e73b941aadb.png>
+ <img align="center" alt="Rafa-Python" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+ <img align="center" alt="Rafa-Python" height="70" width="80" src= https://user-images.githubusercontent.com/106626661/225802391-d24ac038-78b1-4b2d-8720-f5f9fb4dac9a.png>
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+</div>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 
 
@@ -233,7 +232,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://user-images.githubusercontent.com/106626661/225801328-741dd00d-8359-40ee-8d73-df715a5813f6.png alt="Logo" width="80" height="30
+[Next.js]:  <img src="https://user-images.githubusercontent.com/106626661/225801328-741dd00d-8359-40ee-8d73-df715a5813f6.png" alt="Logo" width="80" height="30">
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
