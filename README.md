@@ -137,7 +137,7 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
       <a href="#">
         <img src="https://user-images.githubusercontent.com/106626661/225807702-e7160618-f41a-4dd9-9fe7-b1bb6b3b79f9.png" width="100px;" alt="Foto do Prof"/><br>
         <sub>
-          <b>Professor Daniel Cassar</b>
+          <b>Daniel Cassar (Professor)</b>
         </sub>
       </a>
     </td>
