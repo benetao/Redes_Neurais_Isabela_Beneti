@@ -11,13 +11,17 @@
 [![Size][size-shield]][size-url]
 [![Languages][languages-shield]][languages-url]
 [![Stargazers][stars-shield]][stars-url]
+[![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<img align="right" alt="ilum" height="40" width="150" src="https://github.com/pedrozanineli/pcd.github.io/blob/main/logo1.png">
+ 
 
 
+  
 
 <!-- LOGO -->
 <br />
+
 <div align="center">
   <a href="![neural](https://user-images.githubusercontent.com/106626661/225796535-51b41213-8397-435d-ab94-dc64551a2da1.gif)">
     <img src="https://user-images.githubusercontent.com/106626661/225811805-76c7150a-dc12-4f2c-a09f-74b399f97e53.png" alt="Logo" width="220" height="220">
@@ -26,7 +30,7 @@
   <h3 align="center">Redes Neurais e Algorítmos Genéticos (RNAG)</h3>
 
   <p align="center">
-    Bem vindo ao meu projeto na disciplina de RNAG, do terceiro semestre da Ilum!
+    Bem vindo ao meu projeto na disciplina de RNAG, do terceiro semestre da Ilum Escola de Ciência!
    
   </p>
 </div>
@@ -159,8 +163,9 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
     </td>
   </tr>
 </table>
-
-
+</div>
+<div style="display: inline_block"><br>
+ 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -198,3 +203,4 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[ilum-shield]:"https://user-images.githubusercontent.com/106626661/193426698-dea48fae-20be-423c-8680-41c50c6aa247.png"
