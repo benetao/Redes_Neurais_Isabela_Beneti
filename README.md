@@ -168,6 +168,14 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
         </sub>
       </a>
     </td>
+       <td align="center">
+      <a href="#">
+        <img src="https://user-images.githubusercontent.com/106626661/226813894-c6ff60de-9569-40dc-b9c9-65d3144baeb6.png" width="100px;" alt="Foto do Pepe"/><br>
+        <sub>
+          <b>João Pedro Brito(Glia)</b>
+        </sub>
+      </a>
+    </td>
   </tr>
 </table>
 </div>
