@@ -73,14 +73,13 @@ Em classe, discutimos os temas e programamos juntos, e cada aluno realiza experi
 Portanto, no presente repositório você encontra, dentro das pastas  `Algoritmos Genéticos` e `Redes Neurais`, os notebooks que contêm os experimentos realizados por mim. Neles, eu desenvolvo e comento códigos relacionados ao tema da aula e, ao final, tiro minhas conclusões sobre o experimento.
 
 ### Ferramentas <a name="ferramentas"></a>
-
-As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, principalmente, a plataforma Jupyter Notebook e a linguagem pyhton, na qual todos os códigos foram escritos.
+As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, principalmente, as plataformas Github e Jupyter Notebook, em que escrevi os códigos usando a  linguagem Pyhton.
 </div>
 <div align="center">
+<img align="center" alt="Rafa-Python" height="60" width="60" src= https://user-images.githubusercontent.com/106626661/225802391-d24ac038-78b1-4b2d-8720-f5f9fb4dac9a.png>
  <img align="center" alt="Rafa-Python" height="70" width="70" src= https://user-images.githubusercontent.com/106626661/225802823-3edf4493-8191-433f-9152-7e73b941aadb.png>
  <img align="center" alt="Rafa-Python" height="60" width="80" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
- <img align="center" alt="Rafa-Python" height="60" width="60" src= https://user-images.githubusercontent.com/106626661/225802391-d24ac038-78b1-4b2d-8720-f5f9fb4dac9a.png>
-
+ 
 </div>
 
 
@@ -147,9 +146,9 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://user-images.githubusercontent.com/106626661/225807900-f34e75aa-cb89-43c7-9747-63f9eb6eec7b.png" width="100px;" alt="Foto do Pepe"/><br>
+        <img src="https://user-images.githubusercontent.com/106626661/226813480-59ee8d2e-918a-4929-a463-d1fa13599aaf.png" width="100px;" alt="Foto do Pepe"/><br>
         <sub>
-          <b>Pedro Sophia (Glia)</b>
+          <b>James Almeida (Professor)</b>
         </sub>
       </a>
     </td>
@@ -158,6 +157,14 @@ Sem a ajuda do professor e das glias dessa disciplina, eu não teria conseguido 
         <img src="https://user-images.githubusercontent.com/106626661/225808282-8a7219bc-77e7-4626-a5f4-d80ea97c755d.png" width="100px;" alt="Foto do Gui"/><br>
         <sub>
           <b>Guilherme Dariani (Glia) </b>
+        </sub>
+      </a>
+    </td>
+        <td align="center">
+      <a href="#">
+        <img src="https://user-images.githubusercontent.com/106626661/225807900-f34e75aa-cb89-43c7-9747-63f9eb6eec7b.png" width="100px;" alt="Foto do Pepe"/><br>
+        <sub>
+          <b>Pedro Sophia (Glia)</b>
         </sub>
       </a>
     </td>
