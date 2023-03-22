@@ -41,7 +41,7 @@ Nesse documento, armazenamos funções criandas nos notebooks, o que diminui o r
 </details>
 <details><summary><b>funcoes.py</b></summary>
 <p align="justify">
-Nesse documento, armazenamos funções criandas nos notebooks, o que diminui o risco de perdê-las e facilita o nosso acesso a elas. Dessa forma, criamos a nossa pr´topria biblioteca de funções!
+Nesse documento, armazenamos funções criandas nos notebooks, o que diminui o risco de perdê-las e facilita o nosso acesso a elas. Dessa forma, criamos a nossa própria biblioteca de funções!
 
 </p>
 </details>
