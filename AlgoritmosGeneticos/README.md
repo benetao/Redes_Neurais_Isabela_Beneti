@@ -43,7 +43,9 @@ No entanto, é sempre bom relembrar que esse algorítimo é **probabilístico**,
 <details><summary><b>Experimento A0.5</b></summary>
 
 
-....
+Agora, temos um problema um pouco mais complexo, que foge do padrão das caixas binárias: precisamos descobrir uma senha, ou, pelo menos, chegar o mais próximo possível dela, sempre quantificando o quão perto um indivíduo está da resposta.
+
+Para tanto...
 
 
 </details>
