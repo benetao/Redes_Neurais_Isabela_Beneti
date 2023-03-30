@@ -348,3 +348,25 @@ def gene_letra(letras):
     Retorna: uma letra dentro das possíveis de serem sorteadas. """
     letra = random.choice(letras)
     return letra
+
+###############################################################################
+#                     Experimento individual                                  #
+###############################################################################
+
+def individuo_senha(tamanho_senha, letras):
+    """Cria um candidato para o problema da senha
+    
+    Argumentos:
+      tamanho_senha: inteiro representando o tamanho da senha.
+      letras: letras possíveis de serem sorteadas.
+      
+    Retorna:
+      Lista com n letras
+    """
+
+    candidato = []
+
+    for n in range(tamanho_senha):
+        candidato.append(gene_letra(letras))
+
+    return candidato
