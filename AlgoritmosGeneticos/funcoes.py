@@ -216,7 +216,7 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
     minimização.
     
     Argumentos: populacao= população do problema
-      fun_objetivo= função objetivo
+      fitness= distância da palavra ao candidato real
       tamanho_torneio= quantidade de invidiuos que batalham entre si
     
     Retorna: individuos selecionados. Lista com os individuos selecionados com mesmo
@@ -318,7 +318,7 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
     diferenca = 0
 
     for letra_candidato, letra_oficial in zip(individuo, senha_verdadeira):
-        diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial))
+        diferenca = diferenca + abs(ord(letra_candidato) - ord(letra_oficial)) # função "ord" um valor numérico atribui a cada letra. "Diferença" é uma 
 
     return diferenca
 
