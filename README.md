@@ -94,9 +94,7 @@ As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, pri
     - [x] Experimento A.02
     - [x] Experimento A.03
     - [x] Experimento A.04
-    - [ ] Experimento A.05
-    - [ ] Experimento A.06
-    - [ ] Experimento A.07
+    - [x] Experimento A.05
     
 - [ ] Redes Neurais
     - [ ] Experimento ...
