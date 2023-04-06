@@ -47,6 +47,24 @@ Agora, temos um problema um pouco mais complexo, que foge do padrão das caixas 
 
 Para tanto utilizamos algoritmo genético cuja função objetivo transforma a string da senha em um vetor, e cada letra da senha corresponde a um número dentro desse vetor. Para saber quão distante um canditato está da senha que deve ser descoberta, faz-se a subtração desses vetores: quanto **menor** o valor dessa subtração, melhor o candidato! Por isso, podemos classificar esse problema como um problema de **minimização**.
 
+Como conclusão desse experimento, pudemos perceber natureza customizável dos algoritmos genéticos. Afinal, podemos mudar várias partes do código para que ele retorne resultados melhores e mais rápido, como, por exemplo, na função de mutação, tomar em conta as distâncias entre palavras para todas as letras, e não só letra por letra. 
+</details>
+
+
+<details><summary><b>Experimento GA0.6</b></summary>
+Esse experimento foi totalmente desenvolvido por mim, utilizando apenas algumas das funções e códigos já desenvolvidos nas aulas anteriores. Nele, escrevi um algoritmo genético que calcula o mínimo global da função de Himmelblau, uma função que possui 4 mínimos locais e que é geralmente usada como um problema de teste para algoritmos de otimização. A fórmula dessa função é dada por $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$ e seu gráfico, em 3 dimensões, é:
+
+<div align="center">
+      <img src="https://user-images.githubusercontent.com/106626661/230447980-5a84ec1c-eb23-4f45-9b2e-ea0488479c0b.png" alt="Logo" width="560" height="440">
+  </a>
+
+Para resolver esse problema por meio de algoritmos genéticos, é necessário pensar o que eu consideraria como: `Gene`, `Indivíduo`, `Função objetivo`, `Mutação`, `Seleção`, `Cruzamento`.
+
+Os `genes` serão valores de x e de y em um determinado intervalo de números. Logo, em cada `ìndivíduo` há dois genes apenas, cada um representando uma coordenada do ponto.
+
+O que buscamos, no problema, é o ponto de menor valor da função em um determinado intervalo. Logo, a `função objetivo` deve retornar a projeção de cada ponto (indivíduo) na função $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$. Por fim, como é uma função de minimização, utilizaremos a mesma seleção utilizada no experimento 0.6 das senhas, assim como as mesmas funções de `mutação` e de `cruzamento`.
+
+
 
 </details>
 <details><summary><b>funcoes.py</b></summary>
