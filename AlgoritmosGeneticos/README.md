@@ -50,11 +50,31 @@ Para tanto utilizamos algoritmo genético cuja função objetivo transforma a st
 Como conclusão desse experimento, pudemos perceber natureza customizável dos algoritmos genéticos. Afinal, podemos mudar várias partes do código para que ele retorne resultados melhores e mais rápido, como, por exemplo, na função de mutação, tomar em conta as distâncias entre palavras para todas as letras, e não só letra por letra. 
   
 </details>
+
+</details>
+<details><summary><b>Experimento A0.6</b></summary>
+
+
+Agora, temos um problema um pouco mais complexo, que foge do padrão das caixas binárias: precisamos descobrir uma senha, ou, pelo menos, chegar o mais próximo possível dela, sempre quantificando o quão perto um indivíduo está da resposta.  (através da função objetivo, ou fitness).
+
+Para tanto utilizamos algoritmo genético cuja função objetivo transforma a string da senha em um vetor, e cada letra da senha corresponde a um número dentro desse vetor. Para saber quão distante um canditato está da senha que deve ser descoberta, faz-se a subtração desses vetores: quanto **menor** o valor dessa subtração, melhor o candidato! Por isso, podemos classificar esse problema como um problema de **minimização**.
+
+Como conclusão desse experimento, pudemos perceber natureza customizável dos algoritmos genéticos. Afinal, podemos mudar várias partes do código para que ele retorne resultados melhores e mais rápido, como, por exemplo, na função de mutação, tomar em conta as distâncias entre palavras para todas as letras, e não só letra por letra. 
+  
+</details>
+
+A questão caixeiro viajante para um alto número de cidades é um problema para o qual não sabemos a resposta correta, pois esse é um problema NP de alta complexidade! Portanto, nesse experimento não temos critério de parada fixo. Portanto, devemos estabelecer o número de iterações como critério de parada. Afinal, o único jeito de sabermos qual o melhor caminho para o caixeiro é analisando TODAS as possibilidades. No entanto, isso é quase impossível para um número (C) muito grande de cidades, pois a quantidade de possibilidades é calculada por (C-1)! . Portanto, não é possível checar qual a melhor resposta possível do algoritmo para altos valores de C.
+
+
+Outra mudança que temos nesse código é o tipo de cruzamento, visto que o cruzamento ponto simples não pode ser usado nesse problema, pois não podemos repetir cidades! Por isso, estabeleceremos dois pontos de corte distintos no cruzamento, que agora podem estar nos limites. Esses pontos estabelecerão uma região. O filho 1 vai herdar os genes entre os cortes do pai e o restante da mãe (sem repetir). O filho 2 herdará os genes entre os cortes da mãe e o restante do pai (sem repetir).
+
+Por fim, 
+
 <details><summary><b>Experimento GA0.6</b></summary>
 Esse experimento foi totalmente desenvolvido por mim, utilizando apenas algumas das funções e códigos já desenvolvidos nas aulas anteriores. Nele, escrevi um algoritmo genético que calcula o mínimo global da função de Himmelblau, uma função que possui 4 mínimos locais e que é geralmente usada como um problema de teste para algoritmos de otimização. A fórmula dessa função é dada por $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$ e seu gráfico, em 3 dimensões, é:
 
 <p align="center"><img heigth= 440 width= 560 src="https://user-images.githubusercontent.com/106626661/230451517-f357e355-98ff-402d-9d81-8ab08d715950.png"></p>
-Para resolver esse problema por meio de algoritmos genéticos, é necessário pensar o que eu consideraria como: Gene, Indivíduo, Função objetivo, Mutação`, Seleção, Cruzamento.
+Para resolver esse problema por meio de algoritmos genéticos, é necessário pensar o que eu consideraria como: Gene, Indivíduo, Função objetivo, Seleção, Mutação, Cruzamento.
 
 Os `genes` serão valores de x e de y em um determinado intervalo de números. Logo, em cada `ìndivíduo` há dois genes apenas, cada um representando uma coordenada do ponto.
 
