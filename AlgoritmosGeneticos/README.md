@@ -54,31 +54,34 @@ Como conclusão desse experimento, pudemos perceber natureza customizável dos a
 </details>
 <details><summary><b>Experimento A0.6</b></summary>
 
-
-Agora, temos um problema um pouco mais complexo, que foge do padrão das caixas binárias: precisamos descobrir uma senha, ou, pelo menos, chegar o mais próximo possível dela, sempre quantificando o quão perto um indivíduo está da resposta.  (através da função objetivo, ou fitness).
-
-Para tanto utilizamos algoritmo genético cuja função objetivo transforma a string da senha em um vetor, e cada letra da senha corresponde a um número dentro desse vetor. Para saber quão distante um canditato está da senha que deve ser descoberta, faz-se a subtração desses vetores: quanto **menor** o valor dessa subtração, melhor o candidato! Por isso, podemos classificar esse problema como um problema de **minimização**.
-
-Como conclusão desse experimento, pudemos perceber natureza customizável dos algoritmos genéticos. Afinal, podemos mudar várias partes do código para que ele retorne resultados melhores e mais rápido, como, por exemplo, na função de mutação, tomar em conta as distâncias entre palavras para todas as letras, e não só letra por letra. 
-  
-</details>
-
 A questão caixeiro viajante para um alto número de cidades é um problema para o qual não sabemos a resposta correta, pois esse é um problema NP de alta complexidade! Portanto, nesse experimento não temos critério de parada fixo. Portanto, devemos estabelecer o número de iterações como critério de parada. Afinal, o único jeito de sabermos qual o melhor caminho para o caixeiro é analisando TODAS as possibilidades. No entanto, isso é quase impossível para um número (C) muito grande de cidades, pois a quantidade de possibilidades é calculada por (C-1)! . Portanto, não é possível checar qual a melhor resposta possível do algoritmo para altos valores de C.
 
 
 Outra mudança que temos nesse código é o tipo de cruzamento, visto que o cruzamento ponto simples não pode ser usado nesse problema, pois não podemos repetir cidades! Por isso, estabeleceremos dois pontos de corte distintos no cruzamento, que agora podem estar nos limites. Esses pontos estabelecerão uma região. O filho 1 vai herdar os genes entre os cortes do pai e o restante da mãe (sem repetir). O filho 2 herdará os genes entre os cortes da mãe e o restante do pai (sem repetir).
 
-Por fim, 
+  
+
+</details>
 
 <details><summary><b>Experimento GA0.6</b></summary>
 Esse experimento foi totalmente desenvolvido por mim, utilizando apenas algumas das funções e códigos já desenvolvidos nas aulas anteriores. Nele, escrevi um algoritmo genético que calcula o mínimo global da função de Himmelblau, uma função que possui 4 mínimos locais e que é geralmente usada como um problema de teste para algoritmos de otimização. A fórmula dessa função é dada por $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$ e seu gráfico, em 3 dimensões, é:
 
-<p align="center"><img heigth= 440 width= 560 src="https://user-images.githubusercontent.com/106626661/230451517-f357e355-98ff-402d-9d81-8ab08d715950.png"></p>
-Para resolver esse problema por meio de algoritmos genéticos, é necessário pensar o que eu consideraria como: Gene, Indivíduo, Função objetivo, Seleção, Mutação, Cruzamento.
+<p align="center"><img heigth= 440 width= 560 src="https://user-images.githubusercontent.com/106626661/230674678-4f9e6c5a-753a-4cc2-b7c4-6ef15230dc1b.png"></p>
+Para resolver esse problema por meio de algoritmos genéticos, é necessário pensar o que eu devo considerar como: Gene, Indivíduo, Função objetivo, Seleção, Mutação, Cruzamento e Critério de Parada.
 
-Os `genes` serão valores de x e de y em um determinado intervalo de números. Logo, em cada `ìndivíduo` há dois genes apenas, cada um representando uma coordenada do ponto.
+Os `genes` serão valores de x e de y em um determinado intervalo de números. Logo, cada `ìndivíduo` é uma lista que contem apenas dois genes, cada um representando uma coordenada do ponto. O intervalo em que as coordenadas devem estar pode variar, mas, sabendo que os pontos mínimos de Himmelblau são (3, 2), (-2.805118, 3.131312), (-3.779310, -3.283186) e (3.584428, -1.848126) [1], é bom estabelecermos um domínio que não vá muito abaixo de -4 nem muito acima de 4, visto que nenhum mínimo será encontrado fora desses limites.
 
-O que buscamos, no problema, é o ponto de menor valor da função em um determinado intervalo. Logo, a `função objetivo` deve retornar a projeção de cada ponto (indivíduo) na função $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$. Por fim, como é uma função de minimização, utilizaremos a mesma seleção utilizada no experimento 0.6 das senhas, assim como as mesmas funções de `mutação` e de `cruzamento`.
+O que buscamos, nesse problema, é o ponto de menor valor da função em um determinado intervalo. Logo, a `função objetivo` deve retornar a projeção de cada ponto (indivíduo) na função $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$. Por fim, como é uma função de minimização, utilizaremos a mesma `seleção` utilizada no experimento 0.6 das senhas, assim como as mesmas funções de `mutação` e de `cruzamento`.
+
+Por fim, o `critério de parada` pode ser simplesmente o número de gerações que estabelecemos como constante de busca, assim como estabelecemos em experimentos passados. No entanto, sabendo que o mínimo dessa função é 0, estabelecerei o critério como o "erro" máximo a ser aceito pelo código. Ou seja, se a resposta encontrada se aproximar o suficiente de 0, o código já poderá parar de rodar.
+
+Como resultado, consegui escrever um algoritmo genético que retornava soluções muito próximas dos 4 mínimos reais da função de Himmelblau, que são  (3, 2), (-2.805118, 3.131312), (-3.779310, -3.283186) e (3.584428, -1.848126). A imagem abaixo mostra as respostas obtidas rodando o código 40 vezes, e que coincidem exatamente com os pontos de mínimo reais.
+
+<p align="center"><img heigth= 440 width= 440 src="https://user-images.githubusercontent.com/106626661/230674555-b016e1ea-331d-4154-ab42-a973ed92efec.png"></p>
+
+
+
+
 
 
 
