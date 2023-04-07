@@ -89,7 +89,7 @@ def gene_blau(limite):
     Return:
         Um valor aleatório que esteja dentro do limite definido
     """
-    gene = rd.choice(limite)
+    gene = random.choice(limite)
     return gene
 
 
@@ -169,7 +169,7 @@ def individuo_blau(numero_genes, limite):
         Um indivíduo (lista com genes) possível para o problema fa função Himmelblau
     """
     individuo = []
-    for _ in range(numero_gene):
+    for _ in range(numero_genes):
         g = gene_blau(limite)
         individuo.append(g)
     return individuo
@@ -259,7 +259,7 @@ def populacao_blau(n, numero_genes, limite):
         Uma lista de listas de indivíduo
     """
     populacao = []
-    for _ in range(tamanho):
+    for _ in range(n):
         populacao.append(individuo_blau(numero_genes, limite))
     return populacao
 
@@ -320,6 +320,34 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
 
     return selecionados
 
+def selecao_por_torneio_blau(populacao, chance):
+    """Determina quais indivíduos vão competir e substitui o valor dos perdedores pelo do vencedor
+    
+    Args:
+        populacao: Lista com indivíduos
+        chance: chance de um individuo participar do torneio
+        
+    Return:
+        população alterada pelo torneio (perdedores com o valor do vencedor) 
+    """
+    index = []
+    """solução antiga: melhor_fit = 1e20 # não gostei dessa solução, mas não pensei em nada melhor """
+    melhor_fit = float("inf")
+    for i in range(len(populacao)):
+        if random.random() < chance:
+            individuo = populacao[i]
+            fobj = funcao_objetivo_blau(individuo)
+            if fobj < melhor_fit:
+                melhor_fit = fobj
+                indice_melhor_fit = i
+            index.append(i)
+    
+    selecionados = populacao
+    
+    for j in index:
+        selecionados[j] = populacao[indice_melhor_fit]
+    
+    return selecionados
 
 ###############################################################################
 #                                  Cruzamento                                 #
@@ -441,7 +469,19 @@ def mutacao_de_troca(individuo):
     
     return individuo
     
-
+def mutacao_blau(individuo, limite):
+    """Muta um gene
+    
+    Args:
+        individuo: lista que um individuo no problema da função de Himmelblau
+        limite: valores possíveis para x e y
+        
+    Return:
+        Um indivíduo com um gene mutado.
+    """
+    gene = random.randint(0, len(individuo) - 1)
+    individuo[gene] = gene_blau(limite)
+    return individuo
 
 ###############################################################################
 #                         Função objetivo - indivíduos                        #
