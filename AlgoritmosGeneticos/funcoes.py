@@ -321,7 +321,8 @@ def selecao_torneio_min(populacao, fitness, tamanho_torneio=3):
     return selecionados
 
 def selecao_por_torneio_blau(populacao, chance):
-    """Determina quais indivíduos vão competir e substitui o valor dos perdedores pelo do vencedor
+    """ Essa função foi escrita com a ajuda de Gabriel Pereira!!! Muito obrigadaaaa
+    Determina quais indivíduos vão competir e substitui o valor dos perdedores pelo do vencedor
     
     Args:
         populacao: Lista com indivíduos
@@ -331,7 +332,6 @@ def selecao_por_torneio_blau(populacao, chance):
         população alterada pelo torneio (perdedores com o valor do vencedor) 
     """
     index = []
-    """solução antiga: melhor_fit = 1e20 # não gostei dessa solução, mas não pensei em nada melhor """
     melhor_fit = float("inf")
     for i in range(len(populacao)):
         if random.random() < chance:
