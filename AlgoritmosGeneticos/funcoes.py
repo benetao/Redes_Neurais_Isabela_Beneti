@@ -57,9 +57,16 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
       valor_total: valor total dos itens da mochila em unidades de dinheiros.
       peso_total: peso total dos itens da mochila em unidades de massa.
     """
-
-    "vamos preencher aqui"
-
+    valor_total= 0
+    peso_total= 0
+    for pegou_item_ou_nao, nome_do_item in zip(individuo, ordem_dos_nomes):
+        if pegou_item_ou_nao == 1: # se o item estiver na mochila
+            valor_item= objetos[nome_do_item]["valor"] # vamos adicionar o valor dele ao valor total
+            peso_item= objetos[nome_do_item]["peso"] #adicionar o peso dele ao peso total
+            
+            valor_total= valor_total + valor_item
+            peso_total= peso_total + peso_item
+        
     return valor_total, peso_total
 
 ###############################################################################
@@ -389,7 +396,6 @@ def cruzamento_ponto_simples(pai, mae):
     return filho1, filho2
 
 
-# NOVIDADE
 def cruzamento_ordenado(pai, mae):
     """Operador de cruzamento ordenado.
     Neste cruzamento, os filhos mantém os mesmos genes que seus pais tinham,
@@ -543,30 +549,7 @@ def funcao_objetivo_senha(individuo, senha_verdadeira):
 
     return diferenca
 
-def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
-    """Computa a funcao objetivo de um candidato no problema da mochila.
-    Args:
-      individiuo:
-        Lista binária contendo a informação de quais objetos serão selecionados.
-      objetos:
-        Dicionário onde as chaves são os nomes dos objetos e os valores são
-        dicionários com a informação do peso e valor.
-      limite:
-        Número indicando o limite de peso que a mochila aguenta.
-      ordem_dos_nomes:
-        Lista contendo a ordem dos nomes dos objetos.
-    Returns:
-      Valor total dos itens inseridos na mochila considerando a penalidade para
-      quando o peso excede o limite.
-    """
 
-    "vamos preencher aqui"
-
-    pass
-
-
-
-# NOVIDADE
 def funcao_objetivo_cv(individuo, cidades):
     """Computa a funcao objetivo de um individuo no problema do caixeiro viajante.
     Args:
@@ -613,6 +596,30 @@ def funcao_objetivo_blau(individuo):
     y = individuo[1]
     
     return (x**2 + y - 11)**2 + (x + y**2 - 7)**2
+
+def funcao_objetivo_mochila(individuo, objetos, limite, ordem_dos_nomes):
+    """Computa a funcao objetivo de um candidato no problema da mochila.
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Valor total dos itens inseridos na mochila considerando a penalidade para
+      quando o peso excede o limite.
+    """
+
+    "vamos preencher aqui"
+    valor_mochila, peso_mochila= computa_mochila(individuo, objetos, ordem_dos_nomes)
+    if peso_mochila > limite:
+        return 0.01
+    else:
+        return valor_mochila
 
 
 ###############################################################################
