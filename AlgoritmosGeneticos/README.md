@@ -60,12 +60,7 @@ A questão caixeiro viajante para um alto número de cidades é um problema para
 Outra mudança que temos nesse código é o tipo de cruzamento, visto que o cruzamento ponto simples não pode ser usado nesse problema, pois não podemos repetir cidades! Por isso, estabeleceremos dois pontos de corte distintos no cruzamento, que agora podem estar nos limites. Esses pontos estabelecerão uma região. O filho 1 vai herdar os genes entre os cortes do pai e o restante da mãe (sem repetir). O filho 2 herdará os genes entre os cortes da mãe e o restante do pai (sem repetir).
 
 </details>
-<details><summary><b>Experimento G0.3</b></summary>
 
-Literalmente a ÚNICA diferença entre o problema do caixeiro "tradicional" é a função seleção! Afinal, no experimento A.06 do caixeiro viajante [1], nós lidamos com um problema de minimização, ou seja, procurávamos o MENOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "elecao_torneio_min".
-
-Já no presente experimento, idamos com um problema de maximização, isto é, procuramos o MAIOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "selecao_roleta_max"!!! Além disso, fiz algumas modificações, como trocar o melhor_fitness_ja_visto inicial de float(inf) para -float(inf), e tranformar o código que achava o menor fitness em um código que acha o maior fitness.
-</details>
 <details><summary><b>Experimento A0.7</b></summary>
 
 Agora, retomamos um probelma que foi visto no ano passado pelos alunos da Ilum: o dos itens na mochila. Esse problema, assim como o problema do experimento anterior, é um NP difícil, o que significa que a resposta correta só pode ser obtida por meio da busca exaustiva.
@@ -75,7 +70,12 @@ O Problema da mochila (Knapsack Problem) é um problema de otimização em que s
 Para resolvê-lo, foi necessário um exercício de abstração: os indivíduos do algoritmo genético desenvolvido eram listas com 0 e 1, assim como os indiívuos do problema das caixas binárias, sendo que o 1 representa que o item nessa posição está presente na mochila e o 0 representa que não está. Devido a essa semelhança com o problema das caixas binárias, foi possível utilizar as mesmas funções de gene, população, cruzamento e mutação utilizadas no experimento 3!
 
 Como resultado, obtemos uma lista com itens que podem ser levados na mochila, mas não podemos ter **certeza** se esse resultado é o coreto ou não (apenas se o compararmos com o resultado dado por uma busca exaustiva- que, em altos valores de itens na mesa, é praticamente impossível de ser realizada).
+<details><summary><b>Experimento G0.3</b></summary>
 
+Literalmente a ÚNICA diferença entre o problema do caixeiro "tradicional" é a função seleção! Afinal, no experimento A.06 do caixeiro viajante [1], nós lidamos com um problema de minimização, ou seja, procurávamos o MENOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "elecao_torneio_min".
+
+Já no presente experimento, idamos com um problema de maximização, isto é, procuramos o MAIOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "selecao_roleta_max"!!! Além disso, fiz algumas modificações, como trocar o melhor_fitness_ja_visto inicial de float(inf) para -float(inf), e tranformar o código que achava o menor fitness em um código que acha o maior fitness.
+</details>
 </details>
 <details><summary><b>Experimento GA0.6</b></summary>
 Esse experimento foi totalmente desenvolvido por mim, utilizando apenas algumas das funções e códigos já desenvolvidos nas aulas anteriores. Nele, escrevi um algoritmo genético que calcula o mínimo global da função de Himmelblau, uma função que possui 4 mínimos locais e que é geralmente usada como um problema de teste para algoritmos de otimização. A fórmula dessa função é dada por $f(x,y)= (x² + y - 11)² + (x+ y²- 7)²$ e seu gráfico, em 3 dimensões, é:
