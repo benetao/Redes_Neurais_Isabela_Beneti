@@ -59,7 +59,16 @@ A questão caixeiro viajante para um alto número de cidades é um problema para
 
 Outra mudança que temos nesse código é o tipo de cruzamento, visto que o cruzamento ponto simples não pode ser usado nesse problema, pois não podemos repetir cidades! Por isso, estabeleceremos dois pontos de corte distintos no cruzamento, que agora podem estar nos limites. Esses pontos estabelecerão uma região. O filho 1 vai herdar os genes entre os cortes do pai e o restante da mãe (sem repetir). O filho 2 herdará os genes entre os cortes da mãe e o restante do pai (sem repetir).
 
-  
+</details>
+<details><summary><b>Experimento A0.7</b></summary>
+
+Agora, retomamos um probelma que foi visto no ano passado pelos alunos da Ilum: o dos itens na mochila. Esse problema, assim como o problema do experimento anterior, é um NP difícil, o que significa que a resposta correta só pode ser obtida por meio da busca exaustiva.
+
+O Problema da mochila (Knapsack Problem) é um problema de otimização em que se deseja determinar a melhor combinação de itens a serem colocados em uma mochila, considerando seus valores e pesos, de forma a maximizar o valor total dos itens colocados, sem exceder a capacidade da mochila.
+
+Para resolvê-lo, foi necessário um exercício de abstração: os indivíduos do algoritmo genético desenvolvido eram listas com 0 e 1, assim como os indiívuos do problema das caixas binárias, sendo que o 1 representa que o item nessa posição está presente na mochila e o 0 representa que não está. Devido a essa semelhança com o problema das caixas binárias, foi possível utilizar as mesmas funções de gene, população, cruzamento e mutação utilizadas no experimento 3!
+
+Como resultado, obtemos uma lista com itens que podem ser levados na mochila, mas não podemos ter **certeza** se esse resultado é o coreto ou não (apenas se o compararmos com o resultado dado por uma busca exaustiva- que, em altos valores de itens na mesa, é praticamente impossível de ser realizada).
 
 </details>
 
