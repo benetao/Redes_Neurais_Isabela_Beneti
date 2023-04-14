@@ -1,5 +1,5 @@
 import random
-
+import matplotlib.pyplot as plt
 ###############################################################################
 #                                   Suporte                                   #
 ##############################################################################+
@@ -68,6 +68,95 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
             peso_total= peso_total + peso_item
         
     return valor_total, peso_total
+
+def criar_pontos_intermediarios_x(x, y, num_pontos):
+    """
+    Cria a lista de coordenadas x de pontos intermediários igualmente espaçados entre dois pontos.
+
+    Args:
+        x (list): Lista contendo as coordenadas em x dos dois pontos.
+        y (list): Lista contendo as coordenadas em y dos dois pontos.
+        num_pontos (int): Número de pontos intermediários a serem criados.
+
+    Returns:
+        list: Lista contendo as coordenadas em x dos pontos inicial, final e intermediários.
+    """
+    pontos_x = [x[0]]  # Coordenadas x do ponto inicial
+    pontos_y = [y[0]]  # Coordenadas y do ponto inicial
+
+    # Cálculo dos incrementos em x e y entre os dois pontos
+    incremento_x = (x[1] - x[0]) / (num_pontos + 1)
+    incremento_y = (y[1] - y[0]) / (num_pontos + 1)
+
+    # Criação dos pontos intermediários
+    for i in range(1, num_pontos + 1):
+        ponto_x = x[0] + i * incremento_x
+        ponto_y = y[0] + i * incremento_y
+        pontos_x.append(ponto_x)
+        pontos_y.append(ponto_y)
+
+    pontos_x.append(x[1])  # Coordenadas x do ponto final
+    pontos_y.append(y[1])  # Coordenadas y do ponto final
+
+    return pontos_x
+
+def criar_pontos_intermediarios_y(x, y, num_pontos=30):
+    """
+    Cria a lista de coordenadas y de pontos intermediários igualmente espaçados entre dois pontos.
+
+    Args:
+        x (list): Lista contendo as coordenadas em x dos dois pontos.
+        y (list): Lista contendo as coordenadas em y dos dois pontos.
+        num_pontos (int): Número de pontos intermediários a serem criados.
+
+    Returns:
+        list: Lista contendo as coordenadas em y dos pontos inicial, final e intermediários.
+    """
+    pontos_x = [x[0]]  # Coordenadas x do ponto inicial
+    pontos_y = [y[0]]  # Coordenadas y do ponto inicial
+
+    # Cálculo dos incrementos em x e y entre os dois pontos
+    incremento_x = (x[1] - x[0]) / (num_pontos + 1)
+    incremento_y = (y[1] - y[0]) / (num_pontos + 1)
+
+    # Criação dos pontos intermediários
+    for i in range(1, num_pontos + 1):
+        ponto_x = x[0] + i * incremento_x
+        ponto_y = y[0] + i * incremento_y
+        pontos_x.append(ponto_x)
+        pontos_y.append(ponto_y)
+
+    pontos_x.append(x[1])  # Coordenadas x do ponto final
+    pontos_y.append(y[1])  # Coordenadas y do ponto final
+
+    return pontos_y
+
+def caminhoo_x(listax, listay):
+    lista_total_x=[]
+    lista_total_y=[]
+
+    for i in range(len(listax)-1):
+        listaax=[]
+        listaay=[]
+        listaax= [listax[i], listax[i+1]]
+        listaay= [listay[i], listay[i+1]]
+        lista_total_x.append(criar_pontos_intermediarios_x(listaax, listaay, num_pontos=30))
+    lista_unica = [item for lista in lista_total_x for item in lista]
+    return lista_unica
+
+def caminhoo_y(listax, listay):
+    lista_total_x=[]
+    lista_total_y=[]
+
+    for i in range(len(listax)-1):
+        listaax=[]
+        listaay=[]
+        listaax= [listax[i], listax[i+1]]
+        listaay= [listay[i], listay[i+1]]
+        lista_total_y.append(criar_pontos_intermediarios_y(listaax, listaay, num_pontos=30))
+    lista_unica = [item for lista in lista_total_y for item in lista]
+    return lista_unica
+
 
 ###############################################################################
 #                                    Genes                                    #
