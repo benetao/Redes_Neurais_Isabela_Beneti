@@ -23,7 +23,7 @@
 <br />
 
 <div align="center">
-  <a href="![neural](https://user-images.githubusercontent.com/106626661/225796535-51b41213-8397-435d-ab94-dc64551a2da1.gif)">
+  <a href=>
     <img src="https://user-images.githubusercontent.com/106626661/225811805-76c7150a-dc12-4f2c-a09f-74b399f97e53.png" alt="Logo" width="220" height="220">
   </a>
 
