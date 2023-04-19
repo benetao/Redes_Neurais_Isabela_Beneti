@@ -24,8 +24,6 @@ def distancia_entre_dois_pontos(a, b):
 
     return dist
 
-
-# NOVIDADE
 def cria_cidades(n):
     """Cria um dicionário aleatório de cidades com suas posições (x,y).
     Args:
