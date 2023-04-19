@@ -39,7 +39,7 @@ def cria_cidades(n):
     cidades = {}
 
     for i in range(n):
-        cidades[f"Cidade {i}"] = (random.random(), random.random())
+        cidades[f"Cidade {i+1}"] = (random.random(), random.random())
 
     return cidades
 
