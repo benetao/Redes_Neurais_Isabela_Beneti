@@ -76,6 +76,11 @@ Como resultado, obtemos uma lista com itens que podem ser levados na mochila, ma
 Literalmente a ÚNICA diferença entre o problema do caixeiro "tradicional" é a função seleção! Afinal, no experimento A.06 do caixeiro viajante [1], nós lidamos com um problema de minimização, ou seja, procurávamos o MENOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "elecao_torneio_min".
 
 Já no presente experimento, idamos com um problema de maximização, isto é, procuramos o MAIOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "selecao_roleta_max"!!! Além disso, fiz algumas modificações, como trocar o melhor_fitness_ja_visto inicial de float(inf) para -float(inf), e tranformar o código que achava o menor fitness em um código que acha o maior fitness.
+
+Ao final, criei um gif que mostra o maior caminho possível para o caixeiro viajante, encontrado pelo algoritmo, para 6 cidades:
+<center>
+  <img src='./Figuras/Gif_do_caixeiro.gif' style="width:500px;height:400px"/>
+</center>  
 </details>
   
 <details><summary><b>Experimento GA0.6</b></summary>
