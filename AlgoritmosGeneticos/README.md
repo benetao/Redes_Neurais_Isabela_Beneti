@@ -77,7 +77,7 @@ Literalmente a ÚNICA diferença entre o problema do caixeiro "tradicional" é a
 
 Já no presente experimento, idamos com um problema de maximização, isto é, procuramos o MAIOR caminho para o caixeiro percorrer. Para resolvê-lo, utilizamos a função de seleção "selecao_roleta_max"!!! Além disso, fiz algumas modificações, como trocar o melhor_fitness_ja_visto inicial de float(inf) para -float(inf), e tranformar o código que achava o menor fitness em um código que acha o maior fitness.
 
-Ao final, criei um gif que mostra o maior caminho possível para o caixeiro viajante, encontrado pelo algoritmo, para 6 cidades:
+Ao final, criei um gif que mostra o maior caminho possível para o caixeiro viajante, encontrado pelo algoritmo, para 5 cidades:
 <center>
   <img src='./Figuras/Gif_do_caixeiro.gif' style="width:500px;height:400px"/>
 </center>  
