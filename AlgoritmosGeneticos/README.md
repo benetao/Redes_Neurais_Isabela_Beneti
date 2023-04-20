@@ -72,11 +72,11 @@ Para resolvê-lo, foi necessário um exercício de abstração: os indivíduos d
 
 Como resultado, obtemos uma lista com itens que podem ser levados na mochila, mas não podemos ter **certeza** se esse resultado é o coreto ou não (apenas se o compararmos com o resultado dado por uma busca exaustiva- que, em altos valores de itens na mesa, é praticamente impossível de ser realizada).
 </details>
-<details><summary><b>Experimento A0.8</b></summary>
-`DEAP`: módulo para programar algoritmos genéticos
+<details><summary><b>Experimentoss A0.8 a A.11</b></summary>
+Em todos esses 4 experimentos, ensina-sse a utilizar o módulo `DEAP`, usado para programar algoritmos genéticos.
 Usaremos os submódulos `base, `creators` e `tools`. Além disso, importaremos o resolvedor de algoritmos genéticos `eaSimple` e a função `gene_cb`, criada por nós no primeiro algoritmo genético que desenvolvemos.
-
 A mutação, agora, tem sua chance calculada por gene, e não mais por indivíduo. O indivíduo pode sofrer mais de uma mutação por rodada, pois agora  estamos considerando cada gene. 
+Esse módulo possui funções que realizam tudo o que desenvolvemos nos útimos experimentos de maneira mais simples, sem necessidade de "inventar a roda".
 </details>
 <details><summary><b>Experimento GA0.3</b></summary>
 
