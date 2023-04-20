@@ -77,6 +77,7 @@ Em todos esses 4 experimentos, ensina-sse a utilizar o módulo `DEAP`, usado par
 Usaremos os submódulos `base, `creators` e `tools`. Além disso, importaremos o resolvedor de algoritmos genéticos `eaSimple` e a função `gene_cb`, criada por nós no primeiro algoritmo genético que desenvolvemos.
 A mutação, agora, tem sua chance calculada por gene, e não mais por indivíduo. O indivíduo pode sofrer mais de uma mutação por rodada, pois agora  estamos considerando cada gene. 
 Esse módulo possui funções que realizam tudo o que desenvolvemos nos útimos experimentos de maneira mais simples, sem necessidade de "inventar a roda".
+No entanto, apesar da maior flexibilidade, as funções do módulo DEAP oferecem muito menos flexibilidade de código, diferentemente de quando nós mesmo programamos nosso próprio algoritmo genético.
 </details>
 <details><summary><b>Experimento GA0.3</b></summary>
 
