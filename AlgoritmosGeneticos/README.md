@@ -61,6 +61,7 @@ Outra mudança que temos nesse código é o tipo de cruzamento, visto que o cruz
 
 </details>
 
+
 <details><summary><b>Experimento A0.7</b></summary>
 
 Agora, retomamos um probelma que foi visto no ano passado pelos alunos da Ilum: o dos itens na mochila. Esse problema, assim como o problema do experimento anterior, é um NP difícil, o que significa que a resposta correta só pode ser obtida por meio da busca exaustiva.
@@ -70,6 +71,12 @@ O Problema da mochila (Knapsack Problem) é um problema de otimização em que s
 Para resolvê-lo, foi necessário um exercício de abstração: os indivíduos do algoritmo genético desenvolvido eram listas com 0 e 1, assim como os indiívuos do problema das caixas binárias, sendo que o 1 representa que o item nessa posição está presente na mochila e o 0 representa que não está. Devido a essa semelhança com o problema das caixas binárias, foi possível utilizar as mesmas funções de gene, população, cruzamento e mutação utilizadas no experimento 3!
 
 Como resultado, obtemos uma lista com itens que podem ser levados na mochila, mas não podemos ter **certeza** se esse resultado é o coreto ou não (apenas se o compararmos com o resultado dado por uma busca exaustiva- que, em altos valores de itens na mesa, é praticamente impossível de ser realizada).
+</details>
+<details><summary><b>Experimento A0.8</b></summary>
+`DEAP`: módulo para programar algoritmos genéticos
+Usaremos os submódulos `base, `creators` e `tools`. Além disso, importaremos o resolvedor de algoritmos genéticos `eaSimple` e a função `gene_cb`, criada por nós no primeiro algoritmo genético que desenvolvemos.
+
+A mutação, agora, tem sua chance calculada por gene, e não mais por indivíduo. O indivíduo pode sofrer mais de uma mutação por rodada, pois agora  estamos considerando cada gene. 
 </details>
 <details><summary><b>Experimento GA0.3</b></summary>
 
