@@ -1,5 +1,5 @@
 # Experimentos de otimização e algoritmos genéticos
-Olá, leitor! Nessa pasta, você encontra todos os experimentos realizados por mim, Isabela Beneti, na disciplina de Redes Neurais e Algorítmos Genéticos (RNAG). Para saber mais sobre eles, você pode acessar os notebooks, ou clicar nos subtópicos abaixo:
+Olá, leitor! Nessa pasta, você encontra todos os experimentos de Algoritmos genéticos realizados por mim, Isabela Beneti, na disciplina de Redes Neurais e Algorítmos Genéticos (RNAG). Para saber mais sobre eles, você pode acessar os notebooks, ou clicar nos subtópicos abaixo:
 <details><summary><b>Experimento A0.1</b></summary>
 
 
