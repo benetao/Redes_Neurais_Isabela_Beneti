@@ -69,7 +69,7 @@ def computa_mochila(individuo, objetos, ordem_dos_nomes):
 
 def criar_pontos_intermediarios_x(x, y, num_pontos):
     """
-    Cria a lista de coordenadas x de pontos intermediários igualmente espaçados entre dois pontos.
+    Função criada para  fazer o gif do caixeiro viajante! Cria a lista de coordenadas x de pontos intermediários igualmente espaçados entre dois pontos.
 
     Args:
         x (list): Lista contendo as coordenadas em x dos dois pontos.
@@ -100,7 +100,7 @@ def criar_pontos_intermediarios_x(x, y, num_pontos):
 
 def criar_pontos_intermediarios_y(x, y, num_pontos=30):
     """
-    Cria a lista de coordenadas y de pontos intermediários igualmente espaçados entre dois pontos.
+    Função criada para  fazer o gif do caixeiro viajante! Cria a lista de coordenadas y de pontos intermediários igualmente espaçados entre dois pontos.
 
     Args:
         x (list): Lista contendo as coordenadas em x dos dois pontos.
@@ -108,7 +108,7 @@ def criar_pontos_intermediarios_y(x, y, num_pontos=30):
         num_pontos (int): Número de pontos intermediários a serem criados.
 
     Returns:
-        list: Lista contendo as coordenadas em y dos pontos inicial, final e intermediários.
+        pontos_y: Lista contendo as coordenadas em y dos pontos inicial, final e intermediários.
     """
     pontos_x = [x[0]]  # Coordenadas x do ponto inicial
     pontos_y = [y[0]]  # Coordenadas y do ponto inicial
@@ -130,6 +130,17 @@ def criar_pontos_intermediarios_y(x, y, num_pontos=30):
     return pontos_y
 
 def caminhoo_x(listax, listay):
+    """ Função criada para  fazer o gif do caixeiro viajante! Curia uma lista de TODOS os pontos x para o gif, iterando a função "criar_pontos_intermediarios_y"
+    
+    Args:
+    
+       listax (list): Lista contendo as coordenadas em x das cidades.
+       lista y (list): Lista contendo as coordenadas em y das cidades.   
+    
+    Returns:
+        lista_unica: Lista contendo as coordenadas em x de TODOS os pontos necessários para o gif
+    
+    """
     lista_total_x=[]
     lista_total_y=[]
 
@@ -143,6 +154,19 @@ def caminhoo_x(listax, listay):
     return lista_unica
 
 def caminhoo_y(listax, listay):
+    
+   """ Função criada para  fazer o gif do caixeiro viajante! Curia uma lista de TODOS os pontos y para o gif, iterando a função "criar_pontos_intermediarios_y"
+    
+    Args:
+    
+       listax (list): Lista contendo as coordenadas em x das cidades.
+       lista y (list): Lista contendo as coordenadas em y das cidades.   
+    
+    Returns:
+        lista_unica: Lista contendo as coordenadas em y de TODOS os pontos necessários para o gif
+    
+    
+    """
     lista_total_x=[]
     lista_total_y=[]
 
