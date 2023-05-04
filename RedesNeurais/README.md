@@ -57,7 +57,21 @@ Esse o método de ir calculando as derivadas de frente para trás é chamado de 
 
 
 </details>
-<details><summary><b>Tópico 2</b></summary>
+<details><summary><b>Experimento R.01</b></summary>
+
+À espera da aula 2 para completar esse tópico :)
+</p>
+</details>
+
+</details>
+<details><summary><b>Experimento R.02</b></summary>
+
+À espera da aula 2 para completar esse tópico :)
+</p>
+</details>
+
+</details>
+<details><summary><b>Experimento R.03</b></summary>
 
 À espera da aula 2 para completar esse tópico :)
 </p>
