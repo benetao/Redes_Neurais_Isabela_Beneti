@@ -74,6 +74,8 @@ biologia:
 Em classe, discutimos os temas e programamos juntos, e cada aluno realiza experimentos computacionais relacionados ao tema da aula. Os experimentos realizados em sala são depositados em um repositório tipo git, tal como esse em que você se encontra agora!
 
 Portanto, no presente repositório você encontra, dentro das pastas  `Algoritmos Genéticos` e `Redes Neurais`, os notebooks que contêm os experimentos realizados por mim. Neles, eu desenvolvo e comento códigos relacionados ao tema da aula e, ao final, tiro minhas conclusões sobre o experimento.
+ 
+Ademais, no final do curso, foi proposto um trabalho final, que será realizado em grupos de 4 pessoas, descrito mais abaixo.
 
 ### Ferramentas <a name="ferramentas"></a>
 As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, principalmente, as plataformas Github e Jupyter Notebook, em que escrevi os códigos usando a  linguagem Pyhton.
