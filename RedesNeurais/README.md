@@ -66,7 +66,9 @@ Esse o método de ir calculando as derivadas de frente para trás é chamado de 
 </details>
 <details><summary><b>Experimento R.02</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+Nesse experimento, fomos introduzidos à estrutura de classes em Python, que junta ação e informação,. Ela é uma estrutura de dados muito poderosa, mas também muito complexa também.
+
+Funções definidas dentro de classes são chamadas de `método`. O que não é função dentro da classe é chamada de `propriedade`. Para chamar o método, basta colocar um ponto final e o nome do método.
 </p>
 </details>
 
