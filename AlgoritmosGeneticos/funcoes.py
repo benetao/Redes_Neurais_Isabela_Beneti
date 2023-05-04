@@ -801,60 +801,57 @@ def caminhoo_y(listax, listay):
 ###############################################################################
 
 
-def gene_blau(dominio_x_y):
-    """ Função que gera, a partir do domínio de x e y, um gene
+def gene_blau(dominio):
+    """ Gera um gene para o problema da função de Himmelblau
     
     Args:
-        dominio_x_y: valores possíveis para x
+        dominio: valores possíveis para x e para y
     Return:
-        Um valor pertencente ao domínio de x e y
-        
-    Obs:
-        Vamos trabalhar apenas com domínios iguais para x e y
+        Um valor aleatório do domínio estabelecido
     """
-    gene = random.choice(dominio_x_y)
+    gene = random.choice(dominio)
     return gene
 
-def individuo_blau(n, dominio_x_y):
-    """ Função que gera a partir de um número de genes um domínio, um indivíduo
+def individuo_blau(N, dominio):
+    """ Gera um indivíduo para o problema da função de Himmelblau
     
     Args:
-        n: número de genes
+        N: número de genes
         dominio_x_y: valores possíveis para x e y
         
     Return:
         Um indivíduo possível para o problema
     """
     individuo = []
-    for _ in range(n):
-        gene = gene_blau(dominio_x_y)
+    for _ in range(N):
+        gene = gene_blau(dominio)
         individuo.append(gene)
     return individuo
 
-def populacao_blau(tamanho, n, dominio_x_y):
-    """ Função que gera uma população de indivíduos
+def populacao_blau(tamanho, N, dominio):
+    """ Gera uma população de indivíduos para o problema de Himmelblau
     
     Args:
-        n: Número de genes de cada indivíduo
-        tamanho: Número de Indivíduos
-        dominio_x_y: valores possíveis para x e y
+        N: número de genes de cada indivíduo (2)
+        tamanho: número de indivíduos da população
+        dominio: valores possíveis para x e y
     
     Return:
         Uma lista contendo cada indivíduo
     """
     populacao = []
     for _ in range(tamanho):
-        populacao.append(individuo_blau(n, dominio_x_y))
+        populacao.append(individuo_blau(N, dominio))
     return populacao
 
 def funcao_objetivo_blau(individuo):
-    """Computa qual é a função objetivo do problema de caixas não binárias
+    """Calcula fitness de um indivíduo
     
     Args:
-        individuo: lista contendo os genes das caixas não binárias
+        individuo: lista contendo os genes de um indivíduo
         
     Return:
-        O valor da função de função de Himmelblau no ponto de x e y correspondentes ao gene
+        O valor da função de função de Himmelblau no ponto de x e y, contidos no indivíduo
     """
     x = individuo[0]
     y = individuo[1]
@@ -862,13 +859,13 @@ def funcao_objetivo_blau(individuo):
     return (x**2 + y - 11)**2 + (x + y**2 - 7)**2
 
 def funcao_objetivo_pop_blau(populacao):
-    """ Calcula a função objetivo para todos os membros de uma população
+    """ Calcula fitness de todos indivíduos de uma população
     
     Args:
-        população: Lista com todos os indivíduos da população
+        populacao: Lista com todos os indivíduos da população
         
     Return:
-        Lista contendo o fitness de cada indivíduo
+        Lista com fitness de todos os indivíduos
     """
     fitness = []
     for individuo in populacao:
@@ -876,86 +873,44 @@ def funcao_objetivo_pop_blau(populacao):
         fitness.append(fobj)
     return fitness
 
-def selecao_por_torneio_blau(populacao_total, chance_de_participar):
-    """Seleciona uma parcela da população para competir e coloca o valor do vencedor no lugar dos demais
-    
-    Args:
-        população: Lista com todos os indivíduos da população
-        taxa_de_competicao: chance de um individuo participar da competição
+def torneio_blau(populacao, chance_de_competir_ind):
+	"""Escolhe aleatoriamente parte a da população para competir e coloca o valor do vencedor no lugar dos perdedores
+	
+	Args:
+		população: Lista com todos os indivíduos da população
+		chance_de_competir_ind: chance de um individuo competir
         
-    Return:
-        Lista após as alterações feitas pelo torneio 
-    """
-    index = []
-    """solução antiga: melhor_fit = 1e20 # não gostei dessa solução, mas não pensei em nada melhor """
-    melhor_fit = float("inf")
-    for i in range(len(populacao_total)):
-        if random.random() < chance_de_participar:
-            individuo = populacao_total[i]
-            fobj = funcao_objetivo_blau(individuo)
-            if fobj < melhor_fit:
-                melhor_fit = fobj
-                indice_melhor_fit = i
-            index.append(i)
+	Return:
+		Lista com todos os indivíduos já alterados com valor do vencedor
+	"""
+	index=[]
+	melhor_fit = float("inf")
+	for i in range(len(populacao)):
+		if random.random() < chance_de_competir_ind:
+			individuo = populacao[i]
+			fobj = funcao_objetivo_blau(individuo)
+			if fobj < melhor_fit:
+				melhor_fit = fobj
+				indice_melhor_fit = i
+			index.append(i)
     
-    populacao_selecionada = populacao_total
+	populacao_selecionada = populacao
     
-    for j in index:
-        populacao_selecionada[j] = populacao_total[indice_melhor_fit]
+	for j in index:
+		populacao_selecionada[j] = populacao[indice_melhor_fit]
     
-    return populacao_selecionada
+	return populacao_selecionada
 
-def mutacao_blau(individuo, dominio_x_y):
-    """Realiza a mutação de um gene na problema da função de Himmelblau
+def mutacao_blau(individuo, dominio):
+    """Muta gene no experimento função de Himmelblau
     
     Args:
-        individuo: uma lista representando o individuo no problema das caixas binárias
-        dominio_x_y: valores possíveis para x
+        individuo: uma lista representando o individuo do experimento função de Himmelblau
+        dominio: valores possíveis para x
         
     Return:
-        Um indivíduo com um gene mutado.
+        Indivíduo com gene mutado.
     """
-    gene_a_ser_mutado = random.randint(0, len(individuo) - 1)
-    individuo[gene_a_ser_mutado] = gene_blau(dominio_x_y)
+    gene= random.randint(0, len(individuo) - 1)
+    individuo[gene] = gene_blau(dominio)
     return individuo
-
-def gene_fh2():
-    """ Função que gera um gene
-    
-    Args:
-    Return:
-        Um valor entre -9 e 9
-        
-    """
-    gene = random.randint(-9, 10)
-    return gene
-
-def individuo_fh2(n):
-    """ Função que gera a partir de um número de genes um domínio, um indivíduo
-    
-    Args:
-        n: número de genes
-        
-    Return:
-        Um indivíduo possível para o problema
-    """
-    individuo = []
-    for _ in range(n):
-        gene = gene_fh2()
-        individuo.append(gene)
-    return individuo
-
-def populacao_fh2(tamanho, n):
-    """ Função que gera uma população de indivíduos
-    
-    Args:
-        n: Número de genes de cada indivíduo
-        tamanho: Número de Indivíduos
-    
-    Return:
-        Uma lista contendo cada indivíduo
-    """
-    populacao = []
-    for _ in range(tamanho):
-        populacao.append(individuo_fh2(n))
-    return populacao
