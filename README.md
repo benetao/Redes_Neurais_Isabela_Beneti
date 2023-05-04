@@ -55,6 +55,9 @@
       </ul>
     </li>
     <li><a href="#acknowledgments">Agradecimentos</a></li>
+    <li>
+      <a href="#trabalho">Trabalho final</a>
+      <ul>
   </ol>
 </details>
 
@@ -114,9 +117,14 @@ Veja a pasta [Algorítmos Genéticos](https://github.com/benetao/Redes_Neurais_I
 
 Já na pasta [Redes Neurais](https://github.com/benetao/Redes_Neurais_Isabela_Beneti/tree/main/RedesNeurais), você encontrará os experimentos mais recentes.
 
+<!-- Trabalho Final -->
+## Trabalho final <a name="trabalho"></a>
+
+Para o trabalho final, o professor nos organizou em grupos de 4 pessoas, baseado na classificação dos nossos interesses nas áreas de ciências da hida, humanas e da matéria. Com base nisso, fui inserida num grupo junto com as estudantes Débora van Putten, Eduarda Veiga e Paola Ferrari.
+Estabelecido o grupo, nossa primeira tarefa foi definir um tema para o nosso trabalho...
 
 <!-- Sobre mim -->
-## Sobre mim
+## Sobre mim <a name="isa"></a>
 
 Quem é a aluna por trás desse prejeto de RNAG? Pois bem, deixe-me apresentar:
 
