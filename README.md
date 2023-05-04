@@ -89,7 +89,7 @@ As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, pri
 <!-- Progresso -->
 ## Progresso <a name="progresso"></a>
 
-- [ ] Algorítmos Genéticos
+- [x] Algorítmos Genéticos
     - [x] Experimento A.01
     - [x] Experimento A.02
     - [x] Experimento A.03
@@ -105,8 +105,10 @@ As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, pri
     - [x] Experimento G.06
     
 - [ ] Redes Neurais
-    - [ ] Experimento ...
-    - [ ] Experimento ...
+    - [x] Experimento R.01
+    - [x] Experimento R.02
+    - [x] Experimento R.03
+    - [ ] Experimento R.04
 
 Veja a pasta [Algorítmos Genéticos](https://github.com/benetao/Redes_Neurais_Isabela_Beneti/tree/main/AlgoritmosGeneticos) para ver os experimentos relacionados a esse tema.
 
