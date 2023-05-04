@@ -30,7 +30,7 @@
   <h3 align="center">Redes Neurais e Algorítmos Genéticos (RNAG)</h3>
 
   <p align="center">
-    Bem vindo ao meu projeto na disciplina de RNAG, do terceiro semestre da Ilum Escola de Ciência!
+    Bem vindo ao meu repositório de RNAG, disciplina do terceiro semestre da Ilum Escola de Ciência!
    
   </p>
 </div>
