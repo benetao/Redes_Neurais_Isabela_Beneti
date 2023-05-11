@@ -45,7 +45,7 @@ Logo, podemos também representar a nossa rede neural simples, da figura 2, util
 
 A grande sacada das redes neurais foi feita pelo austríaco Linnainmaa: utilizar derivadas para sabermos o quanto cada parâmetro influencia no resultado! Afinal, a derivada mostra a variação, isto é , mostra o quanto a função está mudando em uma determinada direção. Logo, utilizando derivadas parciais, é possível descobrir o quanto y varia quando mudamos os parâmetros  $w_3$, $w_1$, $w_2$, $b$...
 
-Se sabemos o quanto y varia conforme eu vario cada um desses parâmetros, eu podemos o quanto eu devo mudar esses parâmetros para chegar ao valor ideal de y. Essas derivadas parciais são chamadas de `Gradientes Locais do Parâmetro`. As primeiras derivadas parciais (mais próximas de y) podem ser calculadas de maneira mais direta. Conforme vamos retrocedendo nos parâmetros, é necessário ir aplicando a regra da cadeia para calcular a derivada, assim como mostra a figura 4:
+Se sabemos o quanto y varia conforme eu vario cada um desses parâmetros, eu podemos o quanto eu devo mudar esses parâmetros para chegar ao valor ideal de y. Essas derivadas parciais são chamadas de `Gradientes Locais do Parâmetro`. As primeiras derivadas parciais (mais próximas de y) podem ser calculadas de maneira mais direta. Conforme vamos retrocedendo nos parâmetros, é necessário ir aplicando a `regra da cadeia` para calcular a derivada, assim como mostra a figura 4:
 
 <center>
   <img src= 'https://user-images.githubusercontent.com/106626661/234975100-d3bbd464-cedd-43f1-aa36-5f08d25c64c3.png' style="width:1000px;height:500px"/>
