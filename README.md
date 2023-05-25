@@ -113,7 +113,9 @@ As ferramentas utilizadas para desenvolver o projeto dessa disciplina foram, pri
     - [x] Experimento R.01
     - [x] Experimento R.02
     - [x] Experimento R.03
-    - [ ] Experimento R.04
+    - [x] Experimento R.04
+    - [x] Experimento R.05
+    - [x] Experimento R.06
 
 Veja a pasta [Algorítmos Genéticos](https://github.com/benetao/Redes_Neurais_Isabela_Beneti/tree/main/AlgoritmosGeneticos) para ver os experimentos relacionados a esse tema.
 
