@@ -59,41 +59,82 @@ Esse o método de ir calculando as derivadas de frente para trás é chamado de 
 </details>
 <details><summary><b>Experimento R.01</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+Esse experimento não foi feito em classe. Ele é apenas uma atividade introdutória que retoma os conceitos de derivada, que serão importantes no calculo do gradiente local das redes neurais. 
+Nele, nós apenas desenvolvemos uma função que calcula a derivada de uma função qualquer e mostramos sua representação geométrica.
 </p>
 </details>
 
 </details>
 <details><summary><b>Experimento R.02</b></summary>
 
-Nesse experimento, fomos introduzidos à estrutura de classes em Python, que junta ação e informação,. Ela é uma estrutura de dados muito poderosa, mas também muito complexa também.
+Nesse experimento, fomos introduzidos à estrutura de classes em Python, que junta ação e informação. Ela é uma estrutura de dados muito poderosa, mas também muito complexa também.
 
 Funções definidas dentro de classes são chamadas de `método`. O que não é função dentro da classe é chamada de `propriedade`. Para chamar o método, basta colocar um ponto final e o nome do método.
+  
+Como conclusão desse experimento, podemos afirmar que as `classes` são, de fato, estruturas muito poderosas, mas, por conseguinte, muito complexas também.
+
+Através desse estrutura é possível não apenas definir valores, por meio das chamadas `propriedades`, como também realizar ações, por intermédio dos `métodos` (funções definidas dentro das classes). Esses métodos podem ser `dunder` (como `__init__` e `__repr__`) ou não!
+
+Por serem tão poderosas, as classes nos ajudarão muito a desenvolvermos nossas redes neurais, ou, pelo menos, nossas representações de redes neurais, que é o que faremos no próximo experimento, por meio de grafos.
 </p>
 </details>
 
 </details>
 <details><summary><b>Experimento R.03</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+Como foi antecipado no último experimento, as `classes` de fato nos ajudaram a representar redes neurais por maio de grafos.
+
+No primeiro experimento de Redes Neurais, nós desenhamos à mão o `backpropagation` de uma rede neural, o que demorou muito tempo. Já nesse experimento, fica muito mais rápido criarmos grafos, embora eles ainda estejam incompletos. Afinal, esses grafos contem apenas o valor de cada neurônio artificial e indica quais são seus "progenitores".  Um exemplo de grafo plotado pelo código é a figura abaixo. Falta, ainda, o mais importante: o `Gradiente Local do Parâmetro`. Para calculá-lo, será necessário definir o conceito de derivadas e derivadas parciais, o que faremos nos experimentos seguintes!
 </p>
 </details>
 </details>
 <details><summary><b>Experimento R.04</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+Nessa aula, basicamente usamos a estrutura de classes para elaborar um código que realiza o backpropagation automaticamente, e, para melhor visualização do que ocorre no código, plotamos um grafo da rede neural desenvolvida.
+
+Para tanto, nós inicialmente relembramos alguns conceitos vistos na primeira aula, incluindo o próprio conceito de `backpropagation`, por meio do qual calculamos os `gradientes do parâmetro`. O método de backpropagation é dividido em duas fases:
+- Fase Foward: a entrada é propagada pela rede até que se obtenha uma saída
+- Fase backward:  erro da saída é propagado de volta pela rede para atualizar os pesos e bias de todas as camadas, utilizando o gradiente da função de erro em relação a cada peso.
+
+Esse gradiente é calculado por meio da utilização de derivadas parciais, que são resolvidas pela regra da cadeia, assim como mostrado na figura abaixo.
+
+<center>
+  <img src='./Figuras/grafo_4.png' style="width:1200px;height:500px"/>
+    
+    Figura 1: grafo do método backpropagation
+</center>
+  Basicamente, todo gradiente de parâmetro pode ser calculado por: gradiente do filho (variação de y em relação ao seu filho) * gradiente local do parâmetro (variação do seu filho em relação a ele mesmo)
+
+Como consequência, temos dois tipos de cálculo de gradiente:
+
+* Progenitores que geram filhos por meio da operação de soma: o gradiente pode ser calculado por: **gradiente do filho * 1 (que é o valor do seu gardiente local)**
+* Progenitores que geram filhos por meio da operação de multiplicação: o gradiente pode ser calculado por: **gradiente do filho * outro progenitor (que é o valor do seu gardiente local)**
+  
+  Logo, para calcular o backpropagation de maneira automática, bastou incorporar esses dois tipos de cálculo à nossa classe. Isso foi feito adicionando novas propriedades à classe, incluindo o método dunder `__mult__`, para multiplicar vérticies, a instância `grad`, para calcular armazenar o valor dos gradientes, o método `propagar` que calcula o valor dos gradientes, e o método `propagar_tudo`, para o cálculo automático. Além disso, para o cálculo dos gradientes, foi necessário fazer ordenação topológica.
 </p>
 </details>
 </details>
 <details><summary><b>Experimento R.05</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+O que fizemos nesse notebook foi, basicamente, adicionar mais alguns métodos na nossa classe `Valor`, a fim de prepará-la para desenvolver nossa primeira `Perceptron` no próximo notebook. 
+
+Primeiramente, fomos introduzidos ao conceito de `__radd__` que é idêntico ao dunder `__add__`, mas só é ativado com a estrutura outro_valor + self, isto é, quando o primeiro valor somado não é uma instância. Da mesma forma, definimos `__rmul__` que faz a mesma coisa, mas para `__mul__`.
+
+Em seguida, definimos os métodos dunder `__exp__`, para calcular $e^x$; `__pow__`, de exponenciação; `__truediv__`, de divisão; `__neg__`, para definir o valores de números negativos; `__sub__` e `__rsub__`, que utilizam o método `__neg__` para realizar a subtração; e  `__sig__` para calcular o valor de $S(x) = \frac{e^x}{e^x + 1}$.
+
+Essa função $S(x) = \frac{e^x}{e^x + 1}$ é chamada de sigmoide e será muito importante para construirmos nossa primeira rede neural que NÃO é linear, pois será nossa `função de ativação`. Afinal, redes neurais lineares não são muito úteis, é justamente a não linearidade que permite todas os cálculos e as conexões que tornam o método de Redes Neurais tão único.
 </p>
 </details>
 </details>
 <details><summary><b>Experimento R.06</b></summary>
 
-À espera da aula 2 para completar esse tópico :)
+Nesse notebook, nós desenvolvemos nosso primeiro `Perceptron`, a forma mais simples existente de rede neural: apenas um neurônio e uma camada, e também nosso primeiro `MLP`, composto de uma ou mais camadas ocultas de perceptrons.
+
+Para tanto, criamos as classes `Neuronio` e `Camadas`. A primeira constroi um neurôno artificial, escolhendo aleatoriamente seus valores internos de peso e de viés. A segunda classe cria uma camada de neurônios a partir de uma determinada quantidade de `dados de entrada`, e retorna uma rede neural com um número de neurônios também pré definido. A partir disso conseguimos criar nosso primeiro Perceptron.
+
+Depois disso, definimos a classe `MLP` para poder "empilhar" os Perceptrons e criar, assim, uma rede neural mais complexa de forma automática!
+
+É importante observar que tudo isso é feito uitlizando como base os métodos simples definidos na classe `Valor`, que foi definida nos últimos experimentos.
 </p>
 </details>
 </details>
