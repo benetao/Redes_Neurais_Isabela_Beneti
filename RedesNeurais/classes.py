@@ -115,6 +115,4 @@ class Valor:
 
         for v in reversed(ordem_topologica):
             v.propagar()
-        
-        
 
