@@ -140,9 +140,9 @@ Depois disso, definimos a classe `MLP` para poder "empilhar" os Perceptrons e cr
 </details>
 <details><summary><b>Experimento R.07</b></summary>
 
-Nesse notebook, finalmente terinamos de programar nossa primeira rede neural utilizando python puro. 
+Nesse notebook, finalmente terminamos de programar nossa primeira rede neural utilizando python puro. 
 
-Primeiramente fomos introduzidos a um conceito muito importante, o de função de perda: número que quantifica quão boa ou ruim é a minha previsão. semelhante ao "fitness" do algoritmo genético. Cada problema demanda uma função de perda diferente. Para tanto, usamos a soma dos mínimos quadrados.
+Primeiramente fomos introduzidos a um conceito muito importante, o de `função de perda`: número que quantifica quão boa ou ruim é a minha previsão, semelhante ao "fitness" do algoritmo genético. Cada problema demanda uma função de perda diferente. Para tanto calaculá-la, usamos a soma dos mínimos quadrados.
 
 A partir da propagação da função de perda, tivemos que identificar quais valores são parâmetros. Nesse caso, são os pesos e os viéses. Criamos, então, nas classes Neuronio, Camadas e MLP o método "parâmetros", que navega por todo os parâmetros (pesos e viéses dos neurônios).
 
@@ -150,17 +150,17 @@ Outro conceito que nos foi apresentado foi o de `épocas`: toda vez que a rede n
 
 Por fim, nas últimas células do código, iteramos as 5 etapas necessárias para rodar nossa rede neural:
     
-1- `Fowardpass`:  passar os dados pela rede e calcular y predito, sem calcular os gradientes
+1- `Fowardpass`:  passar os dados pela rede e calcular 'y' predito, sem calcular os gradientes;
     
-2- `Zerando o gradiente`: igualar a zero os gradientes calculados anteriormente
+2- `Zerando o gradiente`: igualar a zero os gradientes calculados anteriormente;
     
-3- `Calculando a função de perda`: calculando quão boa ou ruim foi a previsão, utilizando mínimos quadrados
+3- `Calculando a função de perda`: calcular quão boa ou ruim foi a previsão, utilizando mínimos quadrados;
     
-4- `Backpropagation`: calculando novos dados de gradiente
+4- `Backpropagation`: calcular novos dados de gradiente;
     
-5- `Atualizando parâmetros`: calculando novos dados de parâmetro com base nos gradientes calculados na etapa imediatamente anterior e na taxa de aprendizado pré definida
+5- `Atualizando parâmetros`: calcular novos dados de parâmetro com base nos gradientes calculados na etapa imediatamente anterior e na taxa de aprendizado pré definida.
 
-Finalmente, então, temos uma rede neural programada! Podemos ver, pelo resultado do laço de iteração, que a função de perda de fato vai reduzindo conforme a época. Podemos melhorar ainda mais essa redução da função de perda mudando o valor da taxa de aprendizado.
+Finalmente, então, temos uma rede neural completa programada. Ela não pe muito eficiente visto que roda um número limitado de neurônios e de camadas, mas podemos perceber, pelo resultado do laço de iteração, que a função de perda de fato vai reduzindo conforme a época. Podemos melhorar essa redução da função de perda mudando o valor da taxa de aprendizado.
 </p>
 </details>
 </details>
