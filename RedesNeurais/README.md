@@ -78,3 +78,72 @@ Funções definidas dentro de classes são chamadas de `método`. O que não é 
 À espera da aula 2 para completar esse tópico :)
 </p>
 </details>
+</details>
+<details><summary><b>Experimento R.04</b></summary>
+
+À espera da aula 2 para completar esse tópico :)
+</p>
+</details>
+</details>
+<details><summary><b>Experimento R.05</b></summary>
+
+À espera da aula 2 para completar esse tópico :)
+</p>
+</details>
+</details>
+<details><summary><b>Experimento R.06</b></summary>
+
+À espera da aula 2 para completar esse tópico :)
+</p>
+</details>
+</details>
+<details><summary><b>Experimento R.07</b></summary>
+
+Nesse notebook, finalmente terinamos de programar nossa primeira rede neural utilizando python puro. 
+
+Primeiramente fomos introduzidos a um conceito muito importante, o de função de perda: número que quantifica quão boa ou ruim é a minha previsão. semelhante ao "fitness" do algoritmo genético. Cada problema demanda uma função de perda diferente. Para tanto, usamos a soma dos mínimos quadrados.
+
+A partir da propagação da função de perda, tivemos que identificar quais valores são parâmetros. Nesse caso, são os pesos e os viéses. Criamos, então, nas classes Neuronio, Camadas e MLP o método "parâmetros", que navega por todo os parâmetros (pesos e viéses dos neurônios).
+
+Outro conceito que nos foi apresentado foi o de `épocas`: toda vez que a rede neural viu todos os seus dados, isto é, todos os dados foram passados e a função de perda foi calculada, isso é chamado de "época".
+
+Por fim, nas últimas células do código, iteramos as 5 etapas necessárias para rodar nossa rede neural:
+    
+1- `Fowardpass`:  passar os dados pela rede e calcular y predito, sem calcular os gradientes
+    
+2- `Zerando o gradiente`: igualar a zero os gradientes calculados anteriormente
+    
+3- `Calculando a função de perda`: calculando quão boa ou ruim foi a previsão, utilizando mínimos quadrados
+    
+4- `Backpropagation`: calculando novos dados de gradiente
+    
+5- `Atualizando parâmetros`: calculando novos dados de parâmetro com base nos gradientes calculados na etapa imediatamente anterior e na taxa de aprendizado pré definida
+
+Finalmente, então, temos uma rede neural programada! Podemos ver, pelo resultado do laço de iteração, que a função de perda de fato vai reduzindo conforme a época. Podemos melhorar ainda mais essa redução da função de perda mudando o valor da taxa de aprendizado.
+</p>
+</details>
+</details>
+<details><summary><b>Experimento R.08</b></summary>
+
+A rede neural que programamos nos últimos notebooks infelizmente não é utilizável: ela funciona apenas para fins didáticos, isto é, para entendermos cada etapa das redes neurais. Para podermos, de fato, utilizar uma rede neural útil, podemos recorrer à biblioteca `pytorch`, a qual exploramos no presente notebook.
+
+Para podermos programar uma rede neural utilizando essa biblioteca, o pytorch exige que definimos apenas dois métodos:
+
+1- ` __init__`: onde contamos para ele qual a "arquitetura" da rede, isto é, como funciona cada camada (número de dados de entrada, camadas ocultas, número de saída...). Além disso, podemos definir a função de ativação da nossa rede neural, que nas aulas passadas haviamos definido como a função sigmoide. Dessa vez, como função de ativação, utilizaremos a função retificadora, também denominada ReLU, mostrada na Figura 1.
+
+2-  `foward`: apenas executa a rede do pytorch.
+
+Ademais, definimos que utilizaremos o otimizador `Adam`, que altera os parâmetros da rede neural de maneira mais eficiente que o modo como haviamos programado anteriormente (que levava em conta apenas o gradiente e a taxa de aprendizado).
+
+O pytorch possui dois modos: o de treino e o de avaliação. Nesse experimento, inicialmente utilizamos o modo treino (o que é diferente de "treinar uma rede").
+
+Definido o modo, basta fazer um laço de iteração muito parecido com o que fizemos no final do experimento anterior (R.07), que conta com 5 etapas (fowardpropagation, zerar gradientes, calcular função de perda, back propagation e atualizar parâmetros), mas de maneira muito amis simples e automática em relação ao último notebook.
+
+Por fim, mudamos o modo para o de avaliação e então rodamos nossa rede. Comparando-a com a que programamos manualmente, ela é muito mais eficiente, visto que ela consegue rodar um número muito maior de neurônios e de camadas ocultas, além de retornar resultados muito melhores, o que pode ser percebido comparando-se as funções de perda. Isso se deve sobretudo à mudança de função de ativação (de sigmoide para ReLU) e do método de otimização (Adam).
+  <center>
+  <img src='./Figuras/ReLU.png' style="width:700px;height:300px"/>
+    
+    Figura 1: comparação da sigmoide (usada como função de ativação nos notebooks anteriores) e a ReLU.
+</center>
+</p>
+</details>
